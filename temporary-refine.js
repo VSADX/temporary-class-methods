@@ -13,7 +13,6 @@ export function refine(class_or_class_object = 1, obj = {}, ...constructor_param
             name,
             {   enumerable: false,
                 configurable: true,
-                writable: true,
                 get() { return value.call(this) } }))
 
     return () => funcs.forEach(([name]) => 
