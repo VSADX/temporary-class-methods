@@ -23,3 +23,17 @@ function complex_math() {
 
 }
 ```
+### Add extension methods to Arrays
+```js
+const revokeArr = refine([], { rgb() { 
+  const [r,g,b] = this; 
+  return `rgb(${r},${g},${b})` 
+  } 
+})
+
+const color = [25, 210, 52]
+
+console.log(color.rgb) // "rgb(25,210,52)"
+revokeArr()
+console.log(color.rgb) // undefined
+```
